@@ -1,0 +1,98 @@
+###GET ALL USERS
+GET http://localhost:2828/user-api/get-users
+Content-Type: application/json
+
+###REGISTER A USER
+POST http://localhost:2828/user-api/register-user
+Content-Type: application/json
+
+{
+    "firstName":"venky",
+    "lastName":"majji",
+    "email":"dayyubiddika@gmail.com",
+    "role":"user",
+    "password":"venky"
+}
+
+###LOGIN
+POST http://localhost:2828/user-api/login
+Content-Type: application/json
+
+{
+    "email":"teja@gmail.com",
+    "password":"teja"
+}
+
+###create restaurant
+POST http://localhost:2828/restaurant-api/restaurants
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlamFAZ21haWwuY29tIiwicm9sZSI6InJlc3RhdXJhbnRPd25lciIsImlhdCI6MTY4ODUzNTMzNCwiZXhwIjoxNjg4NjIxNzM0fQ.n2kUfADlZD4IGEYqTA9VRAU7BbZoJOQ072JDzjvsIDU
+Content-Type: application/json
+
+{
+    "name":"test3",
+    "addressId":3
+}
+
+###Get restaurants by pagination
+GET http://localhost:2828/restaurant-api/get-restaurant/1/3
+
+###search restaurants on criteria
+GET http://localhost:2828/restaurant-api/search-restaurant/abcde
+
+###DELETE RESTAURANT
+DELETE http://localhost:2828/user-api/delete-restaurant/8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRheWFuYUBnbWFpbC5jb20iLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE2ODYyMjU3ODgsImV4cCI6MTY4NjMxMjE4OH0.5MarTEHGVcgcGAdtWTjBDqzNtlmj4S-e1jUQatqJ4TE
+
+###UPDATE RESTAURANT BY RESTAURANT OWNER
+PUT http://localhost:2828/user-api/update-restaurant/dummy5
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlamFAZ21haWwuY29tIiwicm9sZSI6InJlc3RhdXJhbnRPd25lciIsImlhdCI6MTY4ODQ2MjU2NSwiZXhwIjoxNjg4NTQ4OTY1fQ.GRdJ9uIfI1U2yScna4EwDAlNMJaNlLivc5YEHdZdry8
+Content-Type: application/json
+
+{
+    "newName":"dummy6"    
+}
+
+###GET ALL RESTAURANTS
+GET http://localhost:2828/restaurant-api/get-restaurants
+
+###SORTED RESTAURANTS ON CRITERIA
+GET http://localhost:2828/restaurant-api/sorted-restaurants
+
+###FILTERED RESTAURANTS
+GET http://localhost:2828/restaurant-api/filter-restaurant/
+
+###GET FILTERED RESTAURANTS
+GET http://localhost:2828/restaurant-api/restaurants
+
+###
+POST http://localhost:2828/restaurant-api/create
+Content-Type: application/json
+
+{
+    "name":"sridevi"
+}
+
+###
+GET http://localhost:2828/restaurant-api/search-restaurant
+
+###
+PUT http://localhost:2828/user-api/update
+Content-Type: application/json
+
+{
+    "name":"dayyu",
+    "newName":"dayana"
+}
+
+###
+POST http://localhost:2828/restaurant-api/address
+Content-Type: application/json
+
+{
+    "id":5,
+    "addressLine1":"road no-5",
+    "city":"shapur",
+    "state":"telangana",
+    "country":"pakistan",
+    "pincode":657321
+}

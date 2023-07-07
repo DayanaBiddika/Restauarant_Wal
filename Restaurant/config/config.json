@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "WAL",
+    "password": "Dayana@123",
+    "database": "migration",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
